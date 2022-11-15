@@ -22,6 +22,11 @@ ant
 
 Command Line Operation:
 
+```shell
+bin/duplink [documents] [output] [parameters]
+```
+
+Command Line Parameters:
 ```
 Command: duplink [documents] [output] [parameters]
     documents:   [mandatory] document directory (see below)
@@ -45,4 +50,10 @@ Output Annotations: list of duplicated spans in a four-column space-separated fi
   char_start:   inclusive start character offset from the original file
   char_end:     exclusive end character offset from the original file
   overlap_per:  percent overlap of the original source (by tokens)
+```
+
+There is a small test dataset included from a synthetic note created as part of the [TREC Clinical Trials 2021 track](https://www.trec-cds.org/2021.html), which can be used for testing.  Recommended command for running that dataset:
+
+```shell
+./bin/duplink data/duplink/test_documents/ duplink_out.txt --gap -1 --penalty -1 --minScore 3 --logging finest --details duplink_details.xml
 ```
