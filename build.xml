@@ -21,6 +21,7 @@
   <path id="class-path">
     <fileset dir="${build.dir}"/>
     <pathelement location="lib/jdom-2.0.3.jar"/>
+    <pathelement location="lib/jdom2-2.0.3.jar"/>
     <pathelement location="lib/olympia-util.jar"/>
     <pathelement location="lib/olympia-text.jar"/>
   </path>
